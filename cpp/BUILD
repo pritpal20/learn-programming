@@ -4,6 +4,6 @@ cc_binary(
     srcs = ["main.cpp"],
     copts = ["-std=c++20"],
     deps = [
-        ":common",
+        "//cpp/lib:common",
     ],
 )
