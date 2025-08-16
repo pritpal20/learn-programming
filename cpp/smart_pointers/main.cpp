@@ -20,6 +20,18 @@ void uniquePointerExample() {
   // Note: The memory will be automatically freed when ptr goes out of scope.
 }
 
+void UniquePointerDeleteExample() {
+  // Create a unique_ptr
+  std::unique_ptr<int> ptr = std::make_unique<int>(30);
+  std::cout << "Value: " << *ptr << std::endl;
+  std::cout << "Unique pointer is managing the memory." << ptr.get()
+            << std::endl;
+  // Manually delete the memory
+  ptr.reset(); // This will delete the memory managed by ptr
+  std::cout << "Memory manually deleted." << std::endl;
+  std::cout << "Unique pointer is now null: " << (ptr == nullptr) << std::endl;
+}
+
 void sharedPointerExample() {
   // Create a shared_ptr
   std::shared_ptr<int> ptr = std::make_shared<int>(20);
@@ -50,6 +62,7 @@ int main(int argc, char const *argv[]) {
 
   if (std::string(argv[1]) == "unique") {
     uniquePointerExample();
+    UniquePointerDeleteExample();
   } else if (std::string(argv[1]) == "shared") {
     sharedPointerExample();
   } else {

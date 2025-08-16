@@ -10,3 +10,16 @@ cc_test(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_test(
+    name = "test_sorting",
+    srcs = [
+        "test_sorting.cpp",
+    ],
+    deps = [
+        "//cpp/lib:common",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+    visibility = ["//visibility:public"],
+)
