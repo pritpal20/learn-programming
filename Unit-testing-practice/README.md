@@ -24,6 +24,20 @@ make -j
 
 This configures and builds the test binaries. The CMake setup in this project uses the `googletest` submodule.
 
+## Build and run the main target
+
+Build the `MyProject` executable:
+
+make MyProject
+
+Run the `MyProject` executable:
+
+./MyProject
+
+Or build and run in one command:
+
+make MyProject && ./MyProject
+
 ## Run tests
 
 Run all tests with CTest (recommended):
