@@ -5,7 +5,7 @@
 template <typename T> class MyVector {
 public:
   MyVector() {
-    capacity = 5;
+    capacity = 1;
     m_size = 0;
     data = new T[capacity];
   }
@@ -57,10 +57,8 @@ public:
 
   std::size_t size() const { return m_size; }
 
-  // Returns true if the vector is empty, false otherwise.
-  // This function checks if the size of the vector is zero.
   bool empty() const { return m_size == 0; }
-  // Returns the current capacity of the vector.
+
   std::size_t get_capacity() const { return capacity; }
 
 private:
@@ -68,23 +66,3 @@ private:
   std::size_t capacity; // initial capacity
   size_t m_size;
 };
-
-int main() {
-  MyVector<int> intVector;
-  intVector.push_back(1);
-  intVector.push_back(2);
-  intVector.push_back(3);
-  intVector.push_back(4);
-  intVector.push_back(5);
-  intVector.push_back(6);
-  intVector.push_back(7);
-  intVector.push_back(8);
-  intVector.push_back(9);
-  intVector.push_back(10);
-  intVector.push_back(11);
-
-  MyVector<int> intVector2 = intVector;
-  std::cout << intVector2 << std::endl;
-
-  return 0;
-}
