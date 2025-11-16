@@ -12,11 +12,11 @@ A collection of programming projects for learning and practicing various concept
 - **[Library & Tests](./cpp/lib/)** — Common library code with unit tests
 - **[Main](./cpp/)** — Core C++ examples and demonstrations
 
-### [Unit Testing Practice](./Unit-testing-practice/README.md)
+### [Unit Testing Project](./unit_testing_project/README.md)
 
-- **[Unit Testing Practice](./Unit-testing-practice/)** — Learn unit testing with GoogleTest
-  - [C++ Testing Examples](./Unit-testing-practice/c++/) — CMake-based C++ unit testing with GoogleTest
-  - [C Testing Examples](./Unit-testing-practice/C-project/) — C unit testing examples
+- **[Unit Testing Project](./unit_testing_project/)** — Learn unit testing with GoogleTest
+  - [C++ Testing Examples](./unit_testing_project/c++/) — CMake-based C++ unit testing with GoogleTest
+  - [C Testing Examples](./unit_testing_project/C-project/) — C unit testing examples
 
 ### Python Projects
 
@@ -30,4 +30,4 @@ To run the smart pointers example with Bazel:
 bazel run //cpp/smart_pointers:main --ui_event_filters=-info,-stdout,-stderr --noshow_progress
 ```
 
-For C++ unit testing, see [Unit-testing-practice/README.md](./Unit-testing-practice/README.md) for build and test instructions.
+For C++ unit testing, see [unit_testing_project/README.md](./unit_testing_project/README.md) for build and test instructions.
