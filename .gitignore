@@ -41,3 +41,6 @@ third_party/
 
 # macOS specific
 .DS_Store
+
+# DO NOT add practice/ directory
+practice/
