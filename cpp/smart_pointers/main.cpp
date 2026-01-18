@@ -5,6 +5,12 @@
 #include <iostream>
 #include <memory>
 
+class Demo {
+public:
+  Demo() { std::cout << "Demo Constructor Called" << std::endl; }
+  ~Demo() { std::cout << "Demo Destructor Called" << std::endl; }
+};
+
 void uniquePointerExample() {
   // Create a unique_ptr
   std::unique_ptr<int> ptr = std::make_unique<int>(10);
@@ -22,8 +28,8 @@ void uniquePointerExample() {
 
 void UniquePointerDeleteExample() {
   // Create a unique_ptr
-  std::unique_ptr<int> ptr = std::make_unique<int>(30);
-  std::cout << "Value: " << *ptr << std::endl;
+  std::unique_ptr<Demo> ptr = std::make_unique<Demo>();
+  // std::cout << "Value: " << *ptr << std::endl;
   std::cout << "Unique pointer is managing the memory." << ptr.get()
             << std::endl;
   // Manually delete the memory
