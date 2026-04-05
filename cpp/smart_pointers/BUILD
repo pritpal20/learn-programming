@@ -15,3 +15,9 @@ cc_binary(
     srcs = ["example_shared_ptr.cpp"],
     deps = [],
 )
+
+cc_binary(
+    name = "weak_ptr_example",
+    srcs = ["weak_ptr_example.cpp"],
+    deps = [],
+)
